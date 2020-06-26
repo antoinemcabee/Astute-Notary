@@ -32,7 +32,7 @@ const Showcase = styled.section`
         position: absolute;
         right: 0rem;
         bottom: 10%;
-        z-index:-1;
+        // z-index: 1; 
     }
 `
 
