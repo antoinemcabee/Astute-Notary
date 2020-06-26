@@ -11,7 +11,7 @@ const Footer = () => {
 }
 
 const Wrapper = styled.footer`
-    background: rgba(0,0,0,.7);
+    background: #36384c;
     width: 100%;
     min-height: 75px;
     display: flex;

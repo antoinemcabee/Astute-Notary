@@ -5,10 +5,16 @@ const Navbar = (props) => {
 
     const [active, setActive] = useState(false);
 
+    const handleClick = (index) => {
+        
+        return props.scroll[index];
+        // setActive(!active)
+    }
+    
     const renderNavItems = () => {
         return ( 
             props.scroll.map((navItem, index) => 
-                <NavListItem key={index} onClick={ props.scroll[index] }>
+                <NavListItem key={index} onClick={ handleClick(index) }>
                     <h4 className='navTitles'>{ props.navTitles[index] }</h4>
                 </NavListItem>
             
@@ -33,7 +39,6 @@ const Navbar = (props) => {
     );
 }
 
-const desktop = `(min-width: 768px)`;
 const mobile =  `(max-width: 768px)`;
 
 const fadeIn = keyframes`
@@ -70,7 +75,7 @@ const Nav = styled.nav`
     align-items: center;
     min-height: 8vh;
     background-color: #849974;
-    opacity: .85;
+    opacity: 1;
     z-index: 1001;
 
     .navTitles {
@@ -100,13 +105,14 @@ const NavList = styled.ul`
         display: none;
         position: absolute;
         right: 0px;
-        height: 92vh;
+        height: 100vh;
         top: 8vh;
         background-color: #849974;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        width: 50%;
+        justify-content: space-evenly;
         transform: ${props => props.activate ? 'translateX(0%)' : 'translateX(100%)'};
         transition: transform 0.25s ease-in-out;
         z-index:1000;
@@ -127,11 +133,11 @@ const NavListItem = styled.li`
     color: #fff;
     list-style: none;
     cursor: pointer;
-    z-index: 5;
+    z-index: 1005;
     
-    @media ${mobile} {
-        animation: ${props => props.activate ? '' : fadeIn}
-    }
+    // @media ${mobile} {
+    //     animation: ${props => props.activate ? '' : fadeIn}
+    // }
 
 
 `;

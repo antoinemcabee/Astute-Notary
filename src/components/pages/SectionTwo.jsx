@@ -23,14 +23,14 @@ const SectionTwo = (props) => {
                 </CardWrapper>
             </Wrapper>
 
-            <ButtonPrimary link={ props.scroll } title='Contact Us' />
+            <ButtonPrimary link={ props.scroll } title='Learn More' />
         </BG>
         
     );
 }
 
 const BG = styled.section`
-    height: 100%;
+    height: 110%;
     width: 100%;
     position: relative;
 `;

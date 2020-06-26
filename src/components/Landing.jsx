@@ -1,4 +1,4 @@
-import React, { Fragment, useRef } from 'react';
+import React, { useRef } from 'react';
 import MainShowcase from './pages/MainShowcase';
 import SectionOne from './pages/SectionOne';
 import SectionTwo from './pages/SectionTwo';

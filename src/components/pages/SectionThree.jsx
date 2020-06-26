@@ -33,12 +33,14 @@ const SectionThree = (props) => {
 const Section = styled.section`
     background: #e9dccd;
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
 
     .icon{
         color: #36384c;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .icon-arrow {
@@ -57,24 +59,28 @@ const Section = styled.section`
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #36384c;
     }
 
     .phone-content {
-        width: 90%;
-        position: absolute;
-        top: 35%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
     }
 
     .email{
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #36384c;
     }
 
     .email-content {
-        width: 90%;
-        position: absolute;
-        top: 55%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
     }
 `;
 
@@ -97,16 +103,20 @@ const Title = styled.h1`
 
 const SubTitle = styled.h2`
     color: #36384c;
-    font-weight: 200;
-    font-size: 1.75rem;
+    font-weight: 600;
+    font-size: .75rem;
     padding-left: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 `;
 
 const StyledContact = styled.h3`
+    padding-top: 1.5rem;
     font-weight: 400;
     color: #613a43;
-    font-size: 1.5rem;
+    font-size: .85rem;
     min-width: 95%;
+    letter-spacing: 5px;
 `;
 
 export default SectionThree;

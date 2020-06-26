@@ -22,13 +22,13 @@ const BG = styled.section`
 
 const Wrapper = styled.div`
     padding: 0 1.5rem;
-    padding-bottom: 40px;
+    padding-bottom: 5.5rem;
 `;
 
 const StyledImage = styled.img.attrs({
     src: ImageOne
 })`
-    padding-top: 2rem;
+    margin-top: 2rem;
     url: {src}
 `;
 

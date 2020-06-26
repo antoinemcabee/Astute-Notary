@@ -22,7 +22,6 @@ const Primary = styled.div`
     text-decoration: none;
     padding: 1em 2.5em;
     margin: 1.5rem 0;
-    border: 1px solid #fff;
     max-width: 70%;
 
     :hover{
@@ -41,7 +40,6 @@ const Secondary = styled.div`
     text-decoration: none;
     padding: 1em 2.5em;
     margin: 1.5rem 0;
-    border: 1px solid #fff;
 
     :hover{
         color: #614a43;
