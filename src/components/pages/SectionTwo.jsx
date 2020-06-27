@@ -6,7 +6,7 @@ import { ButtonPrimary } from '../Buttons';
 
 const SectionTwo = (props) => {
     return (
-        <BG id='sectionTwo' ref={ props.section }>
+        <BG id='sectionTwo'>
             <BgImage />
 
             <Wrapper>
@@ -23,7 +23,7 @@ const SectionTwo = (props) => {
                 </CardWrapper>
             </Wrapper>
 
-            <ButtonPrimary link={ props.scroll } marginTop={2} marginBttm={6} title='Learn More' />
+            <ButtonPrimary link={ props.links[3] } marginTop={2} marginBttm={6} title='Learn More' />
         </BG>
         
     );

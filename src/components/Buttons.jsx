@@ -1,15 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import { HashLink } from 'react-router-hash-link';
 
 export const ButtonPrimary = (props) => {
     return (
-        <Primary mb={props.marginBttm} mt={props.marginTop} link={props.link} >{ props.title }</Primary>
+        <HashLink to={ props.link }>
+            <Primary mb={props.marginBttm} mt={props.marginTop} >{ props.title }</Primary>
+        </HashLink>
     );
 }
 
 export const ButtonSecondary = (props) => {
     return (
-        <Secondary onClick={ props.link } >{ props.title }</Secondary>
+        <HashLink to={props.link}>
+            <Secondary mb={props.marginBttm} mt={props.marginTop} >{ props.title }</Secondary>
+        </HashLink>
     );
 }
 
@@ -22,9 +27,9 @@ const Primary = styled.div.attrs( props => ({
     display: inline-block;
     text-decoration: none;
     padding: 1em 2.5em;
+    margin: 1.5rem 0;
     margin-top: ${props => props.mt}rem;
     margin-bottom: ${props => props.mb}rem;
-    // margin: 1.5rem 0;
     max-width: 70%;
 
     :hover{
@@ -43,6 +48,8 @@ const Secondary = styled.div`
     text-decoration: none;
     padding: 1em 2.5em;
     margin: 1.5rem 0;
+    margin-top: ${props => props.mt}rem;
+    margin-bottom: ${props => props.mb}rem;
 
     :hover{
         color: #614a43;

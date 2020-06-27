@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhoneAlt, faEnvelopeOpen, faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import { HashLink } from 'react-router-hash-link';
 
 const SectionThree = (props) => {
     return (
-        <Section id='sectionThree' ref={ props.section }>
+        <Section id='sectionThree'>
             <Wrapper>
                 <Title>Contact <span className='secondary'>Us</span></Title>
                 <ContentWrapper>
@@ -25,8 +26,11 @@ const SectionThree = (props) => {
                         <StyledContact>jp@astutenotaryservices.com</StyledContact>
                     </div>
                 </ContentWrapper>
+
+                <HashLink to={ props.links[0] }>
+                    <FontAwesomeIcon className='icon-arrow' icon={ faChevronUp }/>
+                </HashLink>
                 
-                <FontAwesomeIcon onClick={props.scroll} className='icon-arrow' icon={ faChevronUp }/>
             </Wrapper>
         </Section>
     );

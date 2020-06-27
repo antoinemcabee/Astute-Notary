@@ -1,15 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import ImgOne from '../../assets/img1.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { HashLink } from 'react-router-hash-link';
 
 const MainShowcase = (props) => {
 
     return (
-        <Showcase id='mainSection' ref={ props.section }>
+        <Showcase id='mainSection'>
             <BgImage />
-            <FontAwesomeIcon onClick={props.scroll} className='icon' icon={ faChevronDown }/>
+
+            <HashLink to={props.links[1]}>
+                <FontAwesomeIcon className='icon' icon={ faChevronDown }/>
+            </HashLink>
+            
             <Wrapper>
                 <Title>Astute Notary Sevices</Title>
                 <StyledH2>Texas Notary</StyledH2>

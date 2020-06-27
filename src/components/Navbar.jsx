@@ -5,29 +5,27 @@ import { HashLink } from 'react-router-hash-link';
 const Navbar = (props) => {
 
     const [active, setActive] = useState(false);
-
-    const handleClick = (index) => {
-        return props.scroll[index];
-    }
     
     const renderNavItems = () => {
         return ( 
-            props.scroll.map((navItem, index) => 
-                <NavListItem key={index} >
-                    <HashLink smooth to={props.links[index]}> 
+            props.links.map((navItem, index) => 
+                <NavListItem key={index} onClick={ () => setActive(!active) }>
+                    <HashLink to={props.links[index]}> 
                         <h4 className='navTitles'>{ props.navTitles[index] }</h4>
                     </HashLink>
                 </NavListItem>
-            
             )
         )
     }
 
     return (
         <Nav>
-            <NavLogo onClick={props.scroll[0]}>
-                <h4>The Nav</h4>
-            </NavLogo>
+            <HashLink to={ props.links[0] }>
+                <NavLogo >
+                    <h4>The Nav</h4>
+                </NavLogo>
+            </HashLink>
+            
             <NavList activate={active}>
                 { renderNavItems() }
             </NavList>
@@ -71,13 +69,15 @@ const Burger = styled.div`
 `;
 
 const Nav = styled.nav`
+    position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100vw;
     min-height: 8vh;
     background-color: #849974;
-    opacity: 1;
     z-index: 1001;
+    
 
     .navTitles {
         font-weight: 600;
