@@ -23,6 +23,7 @@ const Landing = () => {
         <Wrapper>
             <Navbar
                 scroll={ [scrollToHeader, scrollToOne, scrollToTwo, scrollToThree] }
+                links={ ['/#mainSection', '/#sectionOne', '/#sectionTwo', '/#sectionThree'] }
                 navTitles={ ['Home', 'About', 'Process', 'Contact'] }
             />
             <MainShowcase section={ sectionHeader } scroll={ scrollToOne } />

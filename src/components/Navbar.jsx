@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = (props) => {
 
@@ -12,8 +13,10 @@ const Navbar = (props) => {
     const renderNavItems = () => {
         return ( 
             props.scroll.map((navItem, index) => 
-                <NavListItem key={index} onClick={ handleClick(index) }>
-                    <h4 className='navTitles'>{ props.navTitles[index] }</h4>
+                <NavListItem key={index} >
+                    <HashLink smooth to={props.links[index]}> 
+                        <h4 className='navTitles'>{ props.navTitles[index] }</h4>
+                    </HashLink>
                 </NavListItem>
             
             )
@@ -127,15 +130,20 @@ const NavList = styled.ul`
 `;
 
 const NavListItem = styled.li`
-   
-    color: #fff;
     list-style: none;
     cursor: pointer;
     z-index: 1005;
-    
-    // @media ${mobile} {
-    //     animation: ${props => props.activate ? '' : fadeIn}
-    // }
+
+    a:hover {
+        color: #613a43;
+    }
+
+    a {
+        text-decoration: none;
+        list-style: none;
+        color: #fff;
+        transition: all .2s ease-in-out;
+    }
 
 
 `;
