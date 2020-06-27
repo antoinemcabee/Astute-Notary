@@ -37,7 +37,9 @@ const Landing = () => {
 
 const Wrapper = styled.div`
     position: relative;
+    overflow-y: scroll;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 `;
 
 export default Landing;
