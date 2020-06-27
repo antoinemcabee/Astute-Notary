@@ -5,6 +5,7 @@ import SectionTwo from './pages/SectionTwo';
 import SectionThree from './pages/SectionThree';
 import Navbar from './Navbar';
 import Footer from './Footer';
+// import {SmoothScroll} from 'smooth-scroll';
 
 import styled from 'styled-components'
 
@@ -31,6 +32,7 @@ const Landing = () => {
             <SectionTwo section={ sectionTwo } scroll={ scrollToThree } />
             <SectionThree section={ sectionThree } scroll={ scrollToHeader }/>
             <Footer />
+            {/* {scroll} */}
         </Wrapper>
     )
 }
@@ -41,5 +43,9 @@ const Wrapper = styled.div`
     overflow-x: hidden;
     scroll-behavior: smooth;
 `;
+
+// const scroll = new SmoothScroll('a[href*="#"]', {
+// 	speed: 300
+// });
 
 export default Landing;
