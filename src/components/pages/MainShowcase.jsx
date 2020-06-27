@@ -7,7 +7,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 const MainShowcase = (props) => {
 
     return (
-        <Showcase ref={ props.section }>
+        <Showcase id='mainSection' ref={ props.section }>
             <BgImage />
             <FontAwesomeIcon onClick={props.scroll} className='icon' icon={ faChevronDown }/>
             <Wrapper>

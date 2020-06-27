@@ -8,22 +8,24 @@ const SectionThree = (props) => {
         <Section id='sectionThree' ref={ props.section }>
             <Wrapper>
                 <Title>Contact <span className='secondary'>Us</span></Title>
-                <div className='phone-content'>
-                    <div className="phone">
-                        <FontAwesomeIcon  className='icon' icon={faPhoneAlt} />
-                        <SubTitle>Phone</SubTitle>
+                <ContentWrapper>
+                    <div className='phone-content'>
+                        <div className="phone">
+                            <FontAwesomeIcon  className='icon' icon={faPhoneAlt} />
+                            <SubTitle>Phone</SubTitle>
+                        </div>
+                        <StyledContact>(123) 456 - 7890</StyledContact>
                     </div>
-                    <StyledContact>(123) 456 - 7890</StyledContact>
-                </div>
 
-                <div className='email-content'>
-                    <div className="email">
-                        <FontAwesomeIcon  className='icon' icon={faEnvelopeOpen} />
-                        <SubTitle>Email</SubTitle>
+                    <div className='email-content'>
+                        <div className="email">
+                            <FontAwesomeIcon  className='icon' icon={faEnvelopeOpen} />
+                            <SubTitle>Email</SubTitle>
+                        </div>
+                        <StyledContact>jp@astutenotaryservices.com</StyledContact>
                     </div>
-                    <StyledContact>jp@astutenotaryservices.com</StyledContact>
-                </div>
-
+                </ContentWrapper>
+                
                 <FontAwesomeIcon onClick={props.scroll} className='icon-arrow' icon={ faChevronUp }/>
             </Wrapper>
         </Section>
@@ -86,6 +88,15 @@ const Section = styled.section`
 
 const Wrapper = styled.div`
     padding: 0 1.5rem;
+    width: 100%;
+`;
+
+const ContentWrapper = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `;
 
 const Title = styled.h1`

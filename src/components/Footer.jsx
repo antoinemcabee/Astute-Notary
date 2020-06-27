@@ -25,7 +25,7 @@ const Wrapper = styled.footer`
     }
 
     .link {
-        color: #0633ee;
+        color: #e9dccd;
         cursor: pointer;
     }
 `;

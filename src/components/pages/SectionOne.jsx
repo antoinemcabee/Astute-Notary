@@ -5,7 +5,7 @@ import ImageOne from '../../assets/img2.jpg'
 const SectionOne = (props) => {
     return(
         // Section 2
-        <BG id='section-a' ref={props.section}>
+        <BG id='sectionOne' ref={props.section}>
             <Wrapper>
                 <Title>About <span className='secondary'>Astute</span></Title>
                 <StyledImage />

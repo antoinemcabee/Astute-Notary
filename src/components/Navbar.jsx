@@ -6,9 +6,7 @@ const Navbar = (props) => {
     const [active, setActive] = useState(false);
 
     const handleClick = (index) => {
-        
         return props.scroll[index];
-        // setActive(!active)
     }
     
     const renderNavItems = () => {

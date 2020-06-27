@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 export const ButtonPrimary = (props) => {
     return (
-        <Primary onClick={ props.link } >{ props.title }</Primary>
-        //add a href to get the anchor tag to work
+        <Primary mb={props.marginBttm} mt={props.marginTop} link={props.link} >{ props.title }</Primary>
     );
 }
 
@@ -15,13 +14,17 @@ export const ButtonSecondary = (props) => {
 }
 
 
-const Primary = styled.div`
+const Primary = styled.div.attrs( props => ({
+    href: props.link
+}))`
     background: #36384c;
     color: #fff;
     display: inline-block;
     text-decoration: none;
     padding: 1em 2.5em;
-    margin: 1.5rem 0;
+    margin-top: ${props => props.mt}rem;
+    margin-bottom: ${props => props.mb}rem;
+    // margin: 1.5rem 0;
     max-width: 70%;
 
     :hover{
