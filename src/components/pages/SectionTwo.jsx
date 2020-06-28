@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ImgOne from '../../assets/img3.jpg';
-import Card from '../Cards';
+import { CardPrimary } from '../Cards';
 import { ButtonPrimary } from '../Buttons';
 
 const SectionTwo = (props) => {
@@ -12,13 +12,22 @@ const SectionTwo = (props) => {
             <Wrapper>
                 <Title> <span className="secondary">Our</span> Process</Title>
                 <CardWrapper>
-                    <Card 
+                    <CardPrimary 
                         title='Step 1'
                         content='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                        bgColor='#333'
+                        titleColor='#e9dccd'
+                        background={true}
+                        opacity={.7}
                     />
-                    <Card 
+                    <CardPrimary 
                         title='Step 2'
                         content='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                        bgColor='#333'
+                        titleColor='#e9dccd'
+                        background={true}
+                        opacity={.7}
+
                     />
                 </CardWrapper>
             </Wrapper>
@@ -29,10 +38,13 @@ const SectionTwo = (props) => {
     );
 }
 
+const desktop = `(min-width: 768px)`;
+
 const BG = styled.section`
     height: 110%;
     width: 100%;
     position: relative;
+
 `;
 
 const BgImage = styled.div`
@@ -53,12 +65,29 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media ${desktop} {
+        padding: 0 4rem;
+    }
 `;
 
 const CardWrapper = styled.section`
     display: flex;
     overflow-x: auto;
     max-width: 98%;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    @media ${desktop} {
+        max-width: 100%;
+        margin-bottom: 4rem;
+        justify-content: center;
+    }
 `;
 
 const Title = styled.h1`

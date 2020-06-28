@@ -5,7 +5,6 @@ import SectionTwo from './pages/SectionTwo';
 import SectionThree from './pages/SectionThree';
 import Navbar from './Navbar';
 import Footer from './Footer';
-// import {SmoothScroll} from 'smooth-scroll';
 
 import styled from 'styled-components'
 
@@ -30,9 +29,9 @@ const Landing = () => {
 
 const Wrapper = styled.div`
     position: relative;
-    overflow-y: scroll;
     overflow-x: hidden;
     scroll-behavior: smooth;
+
 `;
 
 

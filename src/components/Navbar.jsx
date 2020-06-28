@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { HashLink } from 'react-router-hash-link';
 
 const Navbar = (props) => {
@@ -27,8 +27,11 @@ const Navbar = (props) => {
             </HashLink>
             
             <NavList activate={active}>
-                { renderNavItems() }
+                <SideBarWrapper>
+                    { renderNavItems() }
+                </SideBarWrapper>
             </NavList>
+
             <Burger onClick={() => setActive(!active)}>
                 <div className="line1"></div>
                 <div className="line2"></div>
@@ -39,17 +42,6 @@ const Navbar = (props) => {
 }
 
 const mobile =  `(max-width: 768px)`;
-
-const fadeIn = keyframes`
-    from {
-        opacity: 0;
-        trasform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-`;
 
 const Burger = styled.div`
     display: none;
@@ -96,11 +88,24 @@ const NavLogo = styled.div`
     cursor: pointer;
 `;
 
+const SideBarWrapper = styled.div`
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
+
+    @media ${mobile} {
+        height: 80%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+`;
+
 const NavList = styled.ul`
 
-    display:flex;
     width: 40%;
-    justify-content: space-around;
 
     @media ${mobile} {
         display: none;
@@ -111,20 +116,11 @@ const NavList = styled.ul`
         background-color: #849974;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: start;
         width: 50%;
-        justify-content: space-evenly;
         transform: ${props => props.activate ? 'translateX(0%)' : 'translateX(100%)'};
         transition: transform 0.25s ease-in-out;
         z-index:1000;
-
-        // li {
-        //     opacity: 0;
-        // }
-
-
-
-        
     }
     
 `;
@@ -144,8 +140,6 @@ const NavListItem = styled.li`
         color: #fff;
         transition: all .2s ease-in-out;
     }
-
-
 `;
 
 

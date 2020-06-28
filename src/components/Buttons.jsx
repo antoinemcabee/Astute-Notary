@@ -41,19 +41,11 @@ const Primary = styled.div.attrs( props => ({
 }
 `;
 
-const Secondary = styled.div`
+const Secondary = styled(Primary)`
     background: #613a43;
-    color: #fff;
-    disaply: inline-block;
-    text-decoration: none;
-    padding: 1em 2.5em;
-    margin: 1.5rem 0;
-    margin-top: ${props => props.mt}rem;
-    margin-bottom: ${props => props.mb}rem;
 
     :hover{
         color: #614a43;
-        background: transparent;
         border: 1px solid #613a43;
     }
 `;

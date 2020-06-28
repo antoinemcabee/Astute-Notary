@@ -36,7 +36,7 @@ const Showcase = styled.section`
         height: 5%;
         position: absolute;
         right: 0rem;
-        bottom: 10%;
+        bottom: 15%;
         // z-index: 1; 
     }
 `
