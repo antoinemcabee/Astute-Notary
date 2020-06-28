@@ -49,7 +49,7 @@ const Section = styled.section`
     flex-direction: column;
 
     .arrowIcon {
-        color: #fff;
+        color: #36384c;
         font-size: 2.5rem;
         width: 100%;
         cursor: pointer;
