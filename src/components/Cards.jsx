@@ -31,7 +31,7 @@ export const CardSecondary = (props) => {
                     <CardTitleWithIcon titleColor={ props.titleColor }>{ props.title }</CardTitleWithIcon>
                 </TitleWrapper>
                 
-                <SeparationBar color={ props.titleColor } />
+                {/* <SeparationBar color={ props.titleColor } /> */}
 
                 <CardContentSecondary contentColor={ props.contentColor }>{ props.content }</CardContentSecondary>
             </CardWrapperSecondary>
@@ -46,7 +46,6 @@ const CardBase = styled.div`
     background-color: ${props => props.background ? props.bgColor : 'transparent'};
     opacity: ${props => props.opacity ? props.opacity : 1};
     padding: 2rem 1rem;
-    // margin-top: 2rem;
     margin-right: 2rem;
 
     @media ${desktop} {

@@ -27,7 +27,6 @@ const Showcase = styled.section`
     height: 100vh;
     width: 100%;
     position: relative;
-
     .icon {
         color: #fff;
         font-size: 3.5rem;

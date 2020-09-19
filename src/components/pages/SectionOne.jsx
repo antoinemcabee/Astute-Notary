@@ -50,6 +50,7 @@ const ContentWrapper = styled.div`
         height: 100%;
         display: flex;
         padding-bottom: 5rem;
+        justify-content: center;
     }
 `;
 
@@ -61,9 +62,9 @@ const StyledImage = styled.img.attrs({
 
     @media ${desktop}{
         object-fit: cover;
-        width: 40%;
+        width: 35%;
         height: 350px;
-        align-self: center
+        align-self: center;
     }
 `;
 
@@ -96,6 +97,7 @@ const StyledParagraph = styled.p`
         margin-bottom: 0;
         padding-bottom: 40px; 
         align-self: center;
+        height: 35%;
     }
 `;
 

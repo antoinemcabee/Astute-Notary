@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { faPhoneAlt, faEnvelopeOpen, faChevronUp } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { HashLink } from 'react-router-hash-link'
+import { faPhoneAlt, faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { HashLink } from 'react-router-hash-link'
 import { CardSecondary } from '../Cards'
 
 const SectionThree = (props) => {
@@ -14,7 +14,7 @@ const SectionThree = (props) => {
                     <CardSecondary
                         title='Phone'
                         titleColor='#36384c'
-                        content='(123) 459-7890'
+                        content='(832) 992-6223'
                         icon={faPhoneAlt}
                         contentColor= '#613a43'
                     />
@@ -22,16 +22,15 @@ const SectionThree = (props) => {
                     <CardSecondary
                         title='Email'
                         titleColor='#36384c'
-                        content='antoine@antoine.com'
+                        content='japhelts@astutenotaryservices.com'
                         icon={faEnvelopeOpen}
                         contentColor= '#613a43'
-
                     />
                 </ContentWrapper>
 
-                <HashLink to={props.links[0]}>
+                {/* <HashLink to={props.links[0]}>
                     <FontAwesomeIcon className='arrowIcon' icon={faChevronUp}/>
-                </HashLink>
+                </HashLink> */}
                 
             </Wrapper>
         </Section>
@@ -41,7 +40,8 @@ const SectionThree = (props) => {
 const desktop = `(min-width: 768px)`;
 
 const Section = styled.section`
-    background: #e9dccd;
+    background: #fff;
+    /* background: #e9dccd; */
     width: 100%;
     height: auto;
     position: relative;

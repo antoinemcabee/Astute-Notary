@@ -22,7 +22,7 @@ const Navbar = (props) => {
         <Nav>
             <HashLink to={ props.links[0] }>
                 <NavLogo >
-                    <h4>The Nav</h4>
+                    <h4>ANS</h4>
                 </NavLogo>
             </HashLink>
             
@@ -141,8 +141,5 @@ const NavListItem = styled.li`
         transition: all .2s ease-in-out;
     }
 `;
-
-
-
 
 export default Navbar;

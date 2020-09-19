@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <Wrapper>
             <p className="copyright">&copy; 2020 Astute Notary Services, LLC</p>
-            <p className="credits">Website and Media Powered By <span className='link'>Antoine McAbee/</span></p>
+            <p className="credits">Website and Media Powered By <span ><a className='link' href="http://antoinemcabee.dev" rel="noopener noreferrer" target="_blank">Antoine McAbee/</a></span></p>
         </Wrapper>
     );
 }
